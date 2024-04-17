@@ -1,21 +1,29 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+import './globals.css';
+import Header from '../components/Header';
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Footer: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="bg-gray-900 text-white py-4 px-8">
-        <h1 className="text-2xl font-bold">Vishesh Kumar</h1>
-      </header>
-      <main className="flex-grow px-8 py-12">{children}</main>
-      <footer className="bg-gray-900 text-white py-4 px-8 text-center">
-        <p>&copy; 2023 Vishesh Kumar. All rights reserved.</p>
+      <footer className="py-4 mt-3">
+          <div className="container mx-auto text-center">
+              <p>&copy; 2023 Vishesh Kumar. All rights reserved.</p>
+          </div>
       </footer>
-    </div>
   );
 };
 
-export default Layout;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className="font-sans">
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}
