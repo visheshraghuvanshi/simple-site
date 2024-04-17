@@ -12,19 +12,19 @@ export default function Main() {
             <ProjectCard
                 title="Excellence Study"
                 description="An all-in-one online learning platform"
-                thumbnail={ExcellenceStudyImg}
+                thumbnail="https://i.ibb.co/kQDbv2G/excellence-study.png"
                 link="https://github.com/visheshraghuvanshi/excellence-study"
             />
             <ProjectCard
                 title="Chatify"
                 description="A real-time chat application"
-                thumbnail={ChatifyImg}
+                thumbnail="https://i.ibb.co/cLFzj2b/chatify.png"
                 link="https://github.com/visheshraghuvanshi/chatify"
             />
             <ProjectCard
                 title="Doubt Solving Portal"
                 description="A web application for student-faculty interaction"
-                thumbnail={DSPImg}
+                thumbnail="https://i.ibb.co/tLmT5Gv/dsp.png"
                 link="https://github.com/visheshraghuvanshi/dsp"
             />
             </div>
