@@ -1,9 +1,6 @@
 
 import Layout from "../layout";
 import ProjectCard from "@/components/ProjectCard";
-import ExcellenceStudyImg from "@/assets/excellence-study.png";
-import ChatifyImg from "@/assets/chatify.png";
-import DSPImg from "@/assets/dsp.png";
 
 export default function Main() {
     return (
