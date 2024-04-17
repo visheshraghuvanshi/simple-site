@@ -57,21 +57,30 @@ const ContactSection: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Add your contact form submission logic here
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
+      
+        // Check if the required fields are filled
+        if (!name || !email || !message) {
+          alert('Please fill in all the required fields.');
+          return;
+        }
+      
+        // Construct the email content
+        const mailToLink = `mailto:?subject=Message from your website&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${message}`;
+      
+        // Open the mail app with the pre-filled content
+        window.location.href = mailToLink;
+      
         // Reset the form fields
         setName('');
         setEmail('');
         setMessage('');
-    };
+      };
 
     return (
         <div className="bg-gray-100">
             <StyledContainer>
                 <StyledSectionTitle variant="h2">Contact Me</StyledSectionTitle>
-                <StyledForm onSubmit={handleSubmit}>
+                <StyledForm onSubmit={() => handleSubmit}>
                     <StyledTextField
                         label="Name"
                         variant="outlined"
