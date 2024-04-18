@@ -40,13 +40,18 @@ const Header: React.FC = () => {
     alignItems: 'center',
   });
 
-  const StyledButton = styled(Button)({
-    color: '#333',
-    '&:hover': {
-      backgroundColor: 'rgba(0, 0, 0, 0.04)',
-    },
-    display: { xs: 'none', sm: 'inline-block' },
-  });
+  const StyledButton = styled(Button, {
+    shouldForwardProp: (prop) => prop !== 'color',
+  })`
+    color: ${({ theme, color }) => color || theme.palette.text.primary};
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+    display: ${({ theme }) => ({
+      xs: 'none',
+      sm: 'inline-block',
+    })};
+  `;
 
   const StyledTypography = styled(Typography)(({ theme }) => ({
     color: theme.palette.text.primary,
