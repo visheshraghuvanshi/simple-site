@@ -5,7 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 export default function Main() {
     return (
         <Layout>
-            <div className="h-screen flex items-center justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ml-[10%] mr-[10%]">
+            <div className="h-screen items-center justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ml-[10%] mr-[10%]">
             <ProjectCard
                 title="Excellence Study"
                 description="An all-in-one online learning platform"
