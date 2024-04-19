@@ -39,7 +39,7 @@ const AboutPage: React.FC = () => {
                                             label="Resume"
                                             clickable
                                             component="a"
-                                            href="/resume.pdf"
+                                            href="files/resume.pdf"
                                         />
                                     </Box>
                                 </center>
